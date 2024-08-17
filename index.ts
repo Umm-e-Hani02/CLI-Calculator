@@ -18,6 +18,7 @@ const answer = await inquirer.prompt([
       chalk.yellowBright("Subtraction"),
       chalk.yellowBright("Multiplication"),
       chalk.yellowBright("Division"),
+      chalk.yellowBright("Modulus"),
     ],
     name: "Operator",
   },
@@ -31,6 +32,8 @@ if (answer.Operator === chalk.yellowBright("Addition")) {
   console.log(chalk.yellowBright(`Result: ${answer.FirstNumber * answer.SecondNumber}`));
 } else if (answer.Operator === chalk.yellowBright("Division")) {
   console.log(chalk.yellowBright(`Result: ${answer.FirstNumber / answer.SecondNumber}`));
+} else if (answer.Operator === chalk.yellowBright("Modulus")) {
+  console.log(chalk.yellowBright(`Result: ${answer.FirstNumber % answer.SecondNumber}`));
 } else {
   console.log(chalk.redBright("Please select a valid operator!"));
 }
